@@ -18,14 +18,14 @@ A fully functional Task Manager built with React and TypeScript using Vite.It al
 
 Follow these steps to set up and run the project locally:
 
-1. Clone the Repository
-  git clone 
+ 1. Clone the Repository
+   git clone 
 
-2. Navigate to the Project Directory
+ 2. Navigate to the Project Directory
 
    cd task-manager
 
-3. Install Dependencies
+ 3. Install Dependencies
 
 Install all required packages using npm:
 
@@ -34,6 +34,7 @@ Install all required packages using npm:
    Alternatively, if you use Yarn, run:
 
    yarn install
+   
 4. Start the Development Server
 
    npm run dev
@@ -70,13 +71,13 @@ Install all required packages using npm:
 
    4. ListManagement
 
-4. Main component managing task state, filtering, and task actions.
+    Main component managing task state, filtering, and task actions.
 
-  * Maintains task state using useState.
+     * Maintains task state using useState.
 
-  * Handles status updates, deletion, and filtering.
+     * Handles status updates, deletion, and filtering.
 
-  * Integrates TaskFilter and TaskList.
+     * Integrates TaskFilter and TaskList.
 
 # Example Usage with Documentation
 
@@ -92,7 +93,7 @@ This section shows how to use the components and explains their interactions.
 
        - Combines TaskFilter and TaskList.
 
-* Usage Example:
+  * Usage Example:
 
 import React from "react";
 import { ListManagement } from "./components/ListManagment";
@@ -108,32 +109,33 @@ function App() {
 
 export default App;
 
-* How it works:
+ * How it works:
 
- - Initializes tasks from taskData.ts.
+   - Initializes tasks from taskData.ts.
 
- - Maintains task state and filters.
+   - Maintains task state and filters.
 
- - Updates task status or deletes a task using callbacks.
+   - Updates task status or deletes a task using callbacks.
 
- - Passes filtered tasks to TaskList.
+   - Passes filtered tasks to TaskList.
 
- 2. Task Rendering: TaskList
+2. Task Rendering: TaskList
 
-* Purpose:
+  * Purpose:
 
- - Renders TaskItem components.
+    - Renders TaskItem components.
 
- - Ensures each task has a unique key.
+    - Ensures each task has a unique key.
 
-* Props:
+ * Props:
 
-  - tasks: array of tasks
+   - tasks: array of tasks
 
-  - onStatusChange: callback when status changes
+   - onStatusChange: callback when status changes
 
-  - onDelete: callback to delete task
-* How it works:
+   - onDelete: callback to delete task
+     
+ * How it works:
 
    - Maps over tasks array and renders each TaskItem.
 
@@ -157,17 +159,17 @@ export default App;
 
        - onDelete – callback for deletion
 
-* How it works:
+  * How it works:
 
-  - Renders task info in a card.
+       - Renders task info in a card.
 
-  - Dropdown updates the task state.
+       - Dropdown updates the task state.
 
-  - Delete button removes the task from the parent list.
+       - Delete button removes the task from the parent list.
 
-  4. Filtering: TaskFilter
+ 4. Filtering: TaskFilter
 
-* Purpose:
+   * Purpose:
 
   - Filters tasks by status or priority.
 
@@ -177,13 +179,13 @@ export default App;
 
 * How it works:
 
-  - Renders two dropdowns (status & priority).
+    - Renders two dropdowns (status & priority).
 
-  - Calls onFilterChange on selection change.
+    - Calls onFilterChange on selection change.
 
-  - ListManagement applies filters using useMemo.
+    - ListManagement applies filters using useMemo.
 
-  5. Putting It All Together
+ 5. Putting It All Together
 
    * App Example:
    
@@ -203,15 +205,15 @@ export default App;
 
 # Flow:
 
-- App initializes tasks.
+  - App initializes tasks.
 
-- ListManagement manages task state.
+  - ListManagement manages task state.
 
-- TaskFilter updates filters.
+  - TaskFilter updates filters.
 
-- TaskList renders filtered tasks.
+  - TaskList renders filtered tasks.
 
-- Each TaskItem allows status updates or deletion.
+  - Each TaskItem allows status updates or deletion.
 
 # Screenshot 
 (![Task Manager](image-1.png))
